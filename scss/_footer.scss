@@ -1,0 +1,105 @@
+.footer {
+    width: $width-full;
+    padding: $padding3;
+    @include border-footer;
+
+    .footer-container {
+        width: $width-full;
+        margin: auto;
+        padding: $padding3;
+        @include estilos1;
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "redes"
+        "maps"
+        ;
+        grid-gap: 1rem;
+
+        .logo {
+            grid-area: logo;
+            text-align: center;
+
+            .logo-img { 
+                width: 20vh;
+                border-radius: $radius2;
+                @include border-shadows;
+                transition: all .4s ease-in-out;
+                    
+                &:hover { 
+                    @include border-shadows-hover;
+                } 
+            }
+        }
+
+        .footer-maps {
+            grid-area: maps;
+            text-align: center;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: $radius1;
+            }
+        }
+        
+        .footer-media {
+            grid-area: redes;
+            margin-bottom: $margin4;
+
+            .media-title {
+                padding: $padding2;
+                @include words-2;
+                color: $color1;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            
+            .media {
+                display: flex;
+                flex-flow: nowrap row;
+                justify-content: space-evenly;
+                
+                .media-item {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    padding: $padding2 - .125rem;
+                    @include estilos2;
+                    text-align: center;
+                    transform-style: preserve-3d;
+                    transform: perspective(65rem);
+                    transform: translateZ(1.25rem);
+                    transition: all .1s ease-in-out;
+
+                    .item-link {
+                                                                        
+                        i {
+                            color: $color1;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &:hover {
+                        border: $border-1;
+                    }
+                }
+            }
+        }   
+    }    
+    
+    .footer-copyright {
+        width: $width-full;
+        text-align: center;
+        color: $color1;
+
+        .copyright-text {
+            padding: $padding1;
+            font-size: 80%;
+
+            a {
+                color: $color1;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,50 @@
+.widget{
+    z-index: -1;
+    padding: $padding4 0 $padding4 0;
+
+    .widget-container{
+        width: $width-full;
+        height: $width-full;
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+
+        .widget-item {
+            width: $width-full;
+            max-width: $width - 1.25rem;
+            height: $height + 1.25rem;
+            text-align: center;
+            margin: auto;
+            margin-top: $margin3;
+            margin-bottom: $margin3;
+            padding: $padding2;
+            @include estilos1;
+            display: flex;
+            flex-flow: nowrap column;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            transform: translateZ(20px);
+
+            i{
+                display: block;
+                color: $color1;
+                margin-bottom: $margin4;
+                font-size: 3rem;
+            }
+    
+            span{
+                @include words-2;
+                color: $color1;
+                margin-bottom: $margin4;
+                word-spacing: .125rem;
+            }
+
+            p {
+                @include words-2;
+                color: $color1;
+                margin-bottom: $margin4;
+                word-spacing: .125rem;
+            }
+        }
+    }
+}

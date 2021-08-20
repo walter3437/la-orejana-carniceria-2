@@ -1,0 +1,247 @@
+/*Screen 480px*/
+@media (min-width: 30rem) {
+
+    .slider-contenedor {
+        
+        .slider-boton {
+        
+            a {
+                margin: .15rem;
+                padding: .15rem;
+                font-size: 1rem;
+            }
+        }
+
+        .slider-navegador {
+
+            .navegador-item {
+                width: .75rem;
+                height: .75rem;;
+                font-size: .75rem; 
+            }
+        }
+
+        .slider-next, .slider-previus {
+            font-size: 1.25rem;
+        }
+    }
+
+    .widget {
+
+        .widget-container {
+            flex-flow: wrap row;
+
+            .widget-item {
+                width: $width - 7.5rem;
+                height: $height-full - 6.25rem;
+            }
+        }
+    }
+}
+
+/*Screen 768px*/
+@media (min-width: 48rem) {
+
+    .header {
+
+        .nav {
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+
+            .menu {
+                display: flex;
+                flex-flow: nowrap row;
+                justify-content: space-evenly;                
+                
+                .menu-item {
+
+                    .item-link {
+                        min-width: 8rem;
+                        min-height: 1.25rem;
+                        padding: $padding2 $padding1 0px $padding1;
+                        @include estilos2;
+                        border-radius: $radius1;
+                        transition: all .4s ease-in-out;
+
+                        .item-link-name{
+                            font-size: small;
+                        }
+
+                        &:hover {
+                            border: $border-1;
+                        }
+                    }
+                }
+            }
+    
+            .menu {
+                clear: none;
+                max-height: none;
+            }
+    
+            .menu-icon {
+                display: none;
+            }
+        }
+    }
+
+    .slider-contenedor {
+        
+        .slider-boton {
+
+            .boton-link {
+                font-size: 100%;
+            }
+        }
+
+        .slider-navegador {
+
+            .navegador-item {
+                width: 1rem;
+                height: 1rem;;
+                font-size: 1rem; 
+            }
+        }
+
+        .slider-next, .slider-previus {
+            font-size: 2rem;
+        }
+    }
+
+    .galery {
+        
+        .galery-title {
+            font-size: 2rem;
+        }
+        .galery-container {
+
+            .galery-item {
+                width: $width - 7.5rem;
+                height: $height-full - 7.5rem;
+
+                .item-content {
+
+                    .item-text-container {
+
+                        h5 {
+                            font-size: 1.5rem;
+                        }
+
+                        .item-text {
+                            span {
+                                font-size: 1.2rem;
+                            }
+
+                            i {
+                                font-size: 1.2rem;
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+ 
+        .footer-container {
+            grid-template-areas: 
+            "logo   redes    redes"
+            "logo   maps    maps"
+            ;
+
+            .logo {
+                align-self: center;
+            }
+        }
+        
+        .footer-copyright {
+    
+            .copyright-text {
+                font-size: 100%;
+            }
+        }
+    }
+}
+
+/*Screen 1024px*/
+@media (min-width: 64rem) {
+
+    .header {
+
+        .nav {
+
+            .menu {
+                
+                .menu-item {
+
+                    .item-link {
+                        width: $width - 8.75rem;                        
+                        
+                        .item-link-name{
+                            font-size: 1.1rem;
+                            padding: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Screen 1200px*/
+@media (min-width: 75rem) {
+
+    .header {
+
+        .nav {
+
+            .menu {
+                
+                .menu-item {
+                    
+                    .item-link {
+                        width: $width - 7.5rem;
+                        
+                        .item-link-icon {
+                            font-size: 2.5rem;
+                            padding-bottom: $padding2;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+
+    .galery {
+
+        .galery-container {
+
+            .galery-item {
+                width: $width - 1.25rem;
+                height: $height-full - 1.25rem;
+            
+                .item-content {
+
+                    .item-text-container {
+
+                        h5 {
+                            font-size: 2.5rem;
+                        }
+
+                        .item-text {
+                            span {
+                                font-size: 2rem;
+                            }
+
+                            i {
+                                font-size: 2rem;
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+    
+}

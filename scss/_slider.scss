@@ -1,0 +1,87 @@
+.slider-contenedor {
+    width: $width-full;
+    margin-top: $margin5;
+    position: relative;
+
+    .slider {
+        z-index: 0;
+        
+        .slider-item {
+            width: $width-full;
+
+            .sld-item-img {
+                width: $width-full;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .slider-boton {
+        z-index: 1;
+        position: absolute;
+        bottom: 15%;
+        width: $width-full;
+        display: flex;
+        flex-direction: column;
+        
+        .boton-link {
+            align-self: center;
+            width: 45%;
+            max-width: 16rem;
+            margin: $margin0;
+            padding: $padding0;
+            @include words-2;
+            text-align: center;
+            @include estilos1;
+            background: rgba($color3, .3);
+            color: $color1;
+            font-size: 60%;
+            border-radius: .3rem;
+
+            &:hover {
+                border: $border-1;
+            }
+        }
+    }
+
+    .slider-navegador {
+        z-index: 2;
+        position: absolute;
+        bottom: 2%;
+        width: $width-full;
+        display: flex;
+        justify-content: center;
+        
+        .navegador-item {
+            overflow: hidden;
+            width: .5rem;
+            height: .5rem;;
+            border-radius: $radius2;
+            margin: $margin2;
+            font-size: .5rem;
+            color: $color5;
+            background-color: $color1;
+            cursor: pointer;
+        }
+    }
+
+    .slider-next, .slider-previus {
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        font-size: 1rem;
+        color: $color1;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .slider-next {
+        right: .5rem;
+    }
+
+    .slider-previus {
+        left: .5rem;
+    }
+}
